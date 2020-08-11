@@ -1,10 +1,11 @@
 // variables
-const email = document.getElementById('email');
-const asunto = document.getElementById('asunto');
-const mensaje = document.getElementById('mensaje');
-const btnEnviar = document.getElementById('enviar');
-const formularioEnviar = document.getElementById('enviar-mail');
-const resetBtn = document.getElementById('resetBtn');
+const email = document.getElementById('email'),
+      asunto = document.getElementById('asunto'),
+      mensaje = document.getElementById('mensaje'),
+      btnEnviar = document.getElementById('enviar'),
+      formularioEnviar = document.getElementById('enviar-mail'),
+      resetBtn = document.getElementById('resetBtn'),
+      footer = document.querySelector('#footer');
 
 // event Listener
 
@@ -64,6 +65,7 @@ function resetFormulario(e) {
 function enviarEmail(e) {
      // Spinner al presionar Enviar
      const spinnerGif = document.querySelector('#spinner');
+     footer.style.display = 'none'
      spinnerGif.style.display = 'block';
 
      // Gif que envia email
@@ -75,12 +77,12 @@ function enviarEmail(e) {
 
      setTimeout(function() {
           spinnerGif.style.display = 'none';
-
           document.querySelector('#loaders').appendChild( enviado );
 
           setTimeout(function() {
                enviado.remove();
                formularioEnviar.reset();
+               footer.style.display = '';
           }, 5000);
      }, 3000);
 
