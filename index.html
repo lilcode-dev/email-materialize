@@ -25,18 +25,22 @@
                     <form id="enviar-mail" action="#" class="col s10 offset-s1">
                         <div class="row">
                                 <div class="input-field col s12">
+                                    <input id="from-name" type="text">
+                                    <label for="from-name">From Name:</label>
+                                </div>
+                                <div class="input-field col s12">
                                     <input id="email" type="email">
-                                    <label for="email">Para:</label>
+                                    <label for="email">To Email:</label>
                                 </div>
                                 <div class="input-field col s12">
                                         <input id="asunto" type="text">
-                                        <label for="asunto">Asunto</label>
+                                        <label for="asunto">Subject</label>
                                 </div>
                         </div>
                             <div class="row">
                                 <div class="input-field col s12">
                                 <textarea id="mensaje" class="materialize-textarea"></textarea>
-                                <label for="mensaje">Mensaje</label>
+                                <label for="mensaje">Message</label>
                                 </div>
                             </div>
                             <div class="row" id="loaders">
@@ -71,3 +75,4 @@
     <script src="js/app.js"></script>
   </body>
 </html>
+      
